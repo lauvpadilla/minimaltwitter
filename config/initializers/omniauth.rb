@@ -1,4 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
     provider :developer unless Rails.env.production?
-    provider :twitter, 'Q2M7hfumqGJjjnUf6VtrN7RRS', 'JWJAOUa963a870I6pPejRvsitfr91sz8YS21FkyvEDlprjNqHj'
+    provider :twitter, 'HONlQztX7Fs7bVfiv8GeqypNw', 'ebHH3Ahedob3oGZjw61drt3UnrfYrQDIxEsucaugHeBa2px8OF'
   end
