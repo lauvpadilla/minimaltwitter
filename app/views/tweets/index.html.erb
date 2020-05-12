@@ -1,5 +1,50 @@
-<h1> Minimal Twitter</h1>
+<% if session[:token].present? %>
 
-<p>
-    <a href="/auth/twitter">Login with Twitter</a>
-</p>
+<header>
+	<h1> Brutalist Twitter</h1>
+
+	<p>
+		<%= session[:username] %>
+		<a href="/logout">Log out</a>
+	</p>
+</header>
+
+
+<section>
+	<div class="container">
+	
+	<% @tweets.each do |tweet| %>
+		<div class="tweet">
+			<h2><%= auto_link(tweet.text).html_safe %></h2>
+
+			<div class="info">
+			
+			<p>
+				<img src="<%= tweet.user.profile_image_uri_https %>">
+				<%= tweet.user.screen_name %>
+			</p>
+
+			<p>
+				<%= tweet.retweet_count %> retweets
+			</p>
+			</div>
+	
+		</div>
+
+	<% end %>
+	</div>
+	
+</section>
+
+<% else %>
+<header>
+	<h1> Brutalist Twitter</h1>
+
+	<p>
+		<a href="/auth/twitter">Login with Twitter</a>
+	</p>
+
+</header>
+
+
+<% end %>

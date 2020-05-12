@@ -25,6 +25,11 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'twitter'
+gem 'rinku'
+gem 'twitter-text'
+
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
